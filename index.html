@@ -5,210 +5,287 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HIKAGEGI</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+
 <style>
-body {
-  margin: 0;
-  font-family: serif;
-  background: #F8F6F2;
-  color: #2F2F2F;
-  line-height: 1.8;
-  text-align: center;
+body{
+  margin:0;
+  font-family:"Noto Serif JP", serif;
+  background:#f4f4f4;
+  color:#2f2f2f;
+  letter-spacing:0.08em;
 }
 
-section {
-  padding: 100px 20px;
-  max-width: 800px;
-  margin: auto;
+.wrapper{
+  max-width:680px;
+  margin:auto;
 }
 
-img {
-  width: 100%;
-  max-width: 500px;
+.section{
+  padding:80px 20px;
+  text-align:center;
 }
 
-.cta {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 14px 28px;
-  background: black;
-  color: white;
-  text-decoration: none;
+h1{font-size:24px;letter-spacing:.25em;}
+h2{font-size:14px;letter-spacing:.3em;margin-bottom:20px;}
+p{font-size:13px;line-height:2.2;}
+
+.small{font-size:11px;color:#777;}
+
+.hero img{width:100%;display:block;}
+
+.concept{position:relative;}
+.concept::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url("concept.jpg") center/cover;
+  opacity:.15;
 }
 
-.sticky {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+.features{
+  background:#7f8c91;
+  color:white;
 }
 
-.review {
-  background: #eee;
-  padding: 40px;
-  margin-top: 40px;
+.features-grid,
+.product-grid{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin-top:40px;
+}
+
+.features-grid img{width:260px;}
+.product-grid img{width:240px;}
+
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  margin:10px;
+  border:1px solid #222;
+  text-decoration:none;
+  color:#222;
+}
+
+.btn.black{
+  background:#111;
+  color:white;
+  border:none;
+}
+
+.review{
+  background:#eaeaea;
+  padding:80px 20px;
+}
+
+footer{
+  background:#eaeaea;
+  padding:40px 20px;
+}
+
+/* 📱スマホ */
+@media (max-width:768px){
+  .features-grid,
+  .product-grid{
+    flex-direction:column;
+  }
+
+  .features-grid img,
+  .product-grid img{
+    width:100%;
+    max-width:320px;
+  }
+
+  .btn{
+    display:block;
+    width:90%;
+    margin:10px auto;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section>
-<img src="hero.jpg">
-<h1>日陰衣（HIKAGEGI）</h1>
-<p>静かに、日差しを遮る。あなたのための設計</p>
-<p>価格 ¥12,000（税込・送料無料）</p>
-<p>初回生産 50着限定</p>
-<p>初回生産記念：先着50名様 5%オフ</p>
-<p>クーポンコード：FIRST50</p>
-<a href="https://buy.stripe.com/dRm00lfDM6Sae0Zcoh5AQ01" class="cta">Add to Cart</a>
-</section>
+<div class="wrapper">
 
-<!-- IMAGE -->
-<section>
-<img src="front.jpg">
-<img src="back.jpg">
-</section>
+<!-- HERO -->
+<div class="hero">
+<img src="hero.jpg">
+</div>
+
+<!-- INTRO -->
+<div class="section">
+<p class="small">日陰着 — ひかげぎ</p>
+<h1>HIKAGEGI</h1>
+<p>静かに、日差しを楽しむ。あなたのための設計</p>
+<p class="small">Designed to preserve sovereignty</p>
+
+<p>価格 ¥12,000（税込・送料無料）</p>
+<p class="small">初回生産 50着限定</p>
+<p class="small">初回生産分 先着50名様 5%オフ</p>
+<p class="small">クーポンコード：FIRST50</p>
+</div>
 
 <!-- CONCEPT -->
-<section>
+<div class="section concept">
 <h2>CONCEPT</h2>
-<p>
-日差しを遮るためではなく、<br>
-自分の境界を定義するためのガウンです。<br><br>
-軽やかな生地が、肌にまとわりつかず、静かに空間をまとう。<br><br>
-フードで光をやわらげ、長い袖が外界を覆い、<br>
-ポケットとシルエットは動きを妨げることなく、体の自由を守ります。<br><br>
-在り方のための設計です。
-</p>
-</section>
 
-<!-- DETAIL -->
-<section>
-<img src="detail.jpg">
-</section>
+<p>日差しを避けるためではなく、<br>自分の境界を定義するためのガウンです。</p>
+
+<p>軽やかな生地が、肌にまとわりつかず、静かに空間を保ちます。</p>
+
+<p>フードで光をやわらげ、長い袖が指先まで覆い、<br>ポケットとシルエットは動きを妨げることなく、体の自由を守ります。</p>
+
+<p>在り方のための設計です。</p>
+
+<p class="small">DESIGNED TO CONTROL LIGHT AND PRESERVE SOVEREIGNTY</p>
+</div>
 
 <!-- FEATURES -->
-<section>
+<div class="section features">
 <h2>FEATURES</h2>
+
+<p>静かに守る設計</p>
+
 <p>
-静かに守る設計<br><br>
-深めのフード / ダブルジップ / 軽量素材 / 深めのポケット
+構造：深めのフード / ダブルジップ / ウエストライン設計<br>
+遮断：親指ホール / 指先カバー / 顔まわりまでカバー<br>
+自由：ポニーテール対応 / 軽量素材 / 長時間でも負担が少ない<br>
+機能：深めのポケット / 日常・移動・屋外対応
 </p>
-</section>
 
-<!-- TEXTURE -->
-<section>
-<img src="texture.jpg">
-</section>
+<div class="features-grid">
+<img src="detail1.jpg">
+<img src="detail2.jpg">
+</div>
+</div>
 
-<!-- SCENE -->
-<section>
-<img src="scene.jpg">
-</section>
+<!-- PRODUCT -->
+<div class="section">
+<h2>日陰着（HIKAGEGI）</h2>
 
-<!-- REVIEW -->
-<section class="review">
-<h2>日陰衣を纏った人の声</h2>
+<p>¥12,000（税込・送料無料）</p>
 
-<p><strong>気付けば、これを選んでいる</strong></p>
+<p>日差しの中で、静かに守る。<br>美しさと機能を、ひとつに。</p>
 
-<p>★★★★★<br>
-上下ジッパーの服がなかなかないので助かります。またシルエットが超エレガントです。欲しかったのになかったのがようやく手に入りました！<br>
-— SASHA</p>
+<p class="small">
+初回生産は50着です。<br>
+先着50名様に、5%オフの特典（FIRST50）<br>
+プレオーダー受付中｜6月中旬発送
+</p>
 
-<p>★★★★★<br>
-自転車移動にちょうどいいです。生地も思ったより軽くて、暑い日でも着やすいです。2着目買いました。普段使いに最適です。<br>
-— 東京都 60代</p>
+<a class="https://buy.stripe.com/dRm00lfDM6Sae0Zcoh5AQ01">🇯🇵購入へ進む</a>
+<a class="https://buy.stripe.com/eVqbJ3dvE4K2bSR3RL5AQ02"> 🌍Shop International/a>
 
-<p>★★★★★<br>
-軽くてとても快適です。フードが深く、顔まで日陰になるので夏でも安心して外を歩けます。<br>
-— 東京都　40代</p>
+<p class="small">🇯🇵日本・🇻🇳送料無料 / 🌍海外 ¥2,500</p>
+<p class="small">ベトナム発送（10〜14日）</p>
+<p class="small">安全な決済（Stripe）</p>
+<p class="small">世界各国配送可能</p>
 
-<p>★★★★☆<br>
-ダンスの行き帰りにも、ウォームアップにも体をカバーできてちょうど良いです。両開きなので着脱も簡単でヘアメイクが崩れなくてよい！<br>
-— 千葉県 20代</p>
-
-</section>
+<div class="product-grid">
+<img src="black.jpg">
+<img src="beige.jpg">
+</div>
+</div>
 
 <!-- SIZE -->
-<section>
-<h3>SIZE GUIDE (CM)</h3>
+<div class="section">
+<h2>SIZE GUIDE（CM）</h2>
 <p>
 S：150–165cm<br>
-<br>
-M：165–180cm<br><br>
+M：160–175cm<br>
+L：170–185cm
+</p>
+
+<p class="small">
 ※標準サイズ設計<br>
 ゆったり：通常サイズ<br>
-すっきり：ワンサイズ下<br><br>
-モデル：170cm / M着用
+すっきり：ワンサイズ下
 </p>
-</section>
+
+<p class="small">モデル：165cm / M着用</p>
+</div>
 
 <!-- DETAILS -->
-<section>
-<h3>DETAILS</h3>
+<div class="section">
+<h2>DETAILS</h2>
+
 <p>
-日差し・熱・ほこりから肌を守る全方位プロテクトウェア。<br>
+日差し・熱・ほこりから肌を守る全身プロテクトウェア。<br>
 軽量で動きやすく、日常・移動・屋外に適応。
 </p>
-</section>
 
-<!-- DELIVERY -->
-<section>
-<h3>DELIVERY</h3>
+<h2>DELIVERY</h2>
 <p>
 ベトナムより発送<br>
-到着目安：10〜14日
+到着目安：10〜14日<br>
+※国により関税が発生する場合あり
 </p>
-</section>
 
-<!-- PAYMENT -->
-<section>
-<h3>PAYMENT</h3>
+<h2>PAYMENT</h2>
 <p>
 Stripe決済<br>
 Visa / Mastercard / Amex / JCB<br>
 Apple Pay / Google Pay
 </p>
-</section>
 
-<!-- CONTACT -->
-<section>
-<h3>CONTACT</h3>
+<h2>CONTACT</h2>
 <p>hikagegi.contact@gmail.com</p>
-</section>
+</div>
 
-<!-- LAW -->
-<section>
-<h3>特定商取引法に基づく表記</h3>
+<!-- REVIEW -->
+<div class="review">
+<h2>日陰着を纏った人の声</h2>
+
+<p>★★★★★ 上下ジッパーの服がなかなかないので助かります。またシルエットがエレガントです。欲しくてなかったデザインが手にとれた！</p>
+<p class="small">— SASHA</p>
+
+<p>★★★★★ 自転車移動にちょうどいいです。風通しがとてもよく軽くて快適です。</p>
+<p class="small">— 東京都 60代</p>
+
+<p>★★★★★ フードと袖の長さが完全カバーできて安心</p>
+<p class="small">— HINA</p>
+
+<p>★★★★☆ ダンス帰りにも使いやすい。前開きでヘアメイクが崩れなくて完璧</p>
+<p class="small">— 千葉県 20代</p>
+</div>
+
+<!-- LEGAL -->
+<div class="section">
+<h2>配送・返品について</h2>
+
+<p>
+ご注文後、3〜5営業日以内に発送。<br>
+発送後、通常7〜10日程度でお届け。
+</p>
+
+<p>
+返品は商品不備のみ対応。<br>
+7日以内にご連絡ください。
+</p>
+
+<h2>特定商取引法に基づく表記</h2>
+
 <p>
 販売事業者：HIKAGEGI<br>
 運営責任者：SUZUHA TAKAGI<br>
-所在地：※請求があった場合開示<br>
-メール：hikagegi.contact@gmail.com<br>
-販売URL：https://hikagegi.carrd.co
+メール：hikagegi.contact@gmail.com
 </p>
-</section>
 
-<!-- PRIVACY -->
-<section>
-<h3>PRIVACY POLICY</h3>
+<h2>PRIVACY POLICY</h2>
+
 <p>
-個人情報は信頼の一部として扱います。<br>
-配送・連絡・サービス向上のため使用。
+個人情報は適切に管理し、第三者提供しません。
 </p>
-</section>
+</div>
 
-<!-- FOOTER -->
-<section>
-<h3>HIKAGEGI</h3>
-<p>© HIKAGEGI</p>
-</section>
+<footer>
+<p>HIKAGEGI</p>
+<p class="small">© HIKAGEGI</p>
+</footer>
 
-<!-- CTA -->
-<div class="sticky">
-<a href="https://buy.stripe.com/dRm00lfDM6Sae0Zcoh5AQ01" class="cta">Add to Cart</a>
 </div>
 
 </body>
